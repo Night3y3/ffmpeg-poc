@@ -1,11 +1,12 @@
 import "./App.css";
 import VideoPlayer from "./VideoPlayer";
 import { useRef } from "react";
+import videojs from "video.js";
 
 function App() {
   const playerRef = useRef(null);
   const videoLink =
-    "https://b6236a46-f430-4067-bddf-cc285bdc8cb8-00-2ocyvrk6rop7y.sisko.replit.dev/upload/videos/29837851-9fdc-4c2f-a9ad-7528fd008028/index.m3u8";
+    "http://localhost:8080/uploads/videos/1e90a0a1-216c-4459-914c-36afe579d682/index.m3u8";
   const videoPlayerOptions = {
     controls: true,
     responsive: true,

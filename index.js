@@ -16,14 +16,14 @@ app.use(
       "https://b6236a46-f430-4067-bddf-cc285bdc8cb8-00-2ocyvrk6rop7y.sisko.replit.dev/",
     ],
     credentials: true,
-  }),
+  })
 );
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
     "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept",
+    "Origin, X-Requested-With, Content-Type, Accept"
   );
   next();
 });
@@ -58,7 +58,8 @@ app.post("/upload", upload.single("file"), (req, res) => {
     }
     console.log(`stdout: ${stdout}`);
     console.log(`stderr: ${stderr}`);
-    const videoUrl = `https://b6236a46-f430-4067-bddf-cc285bdc8cb8-00-2ocyvrk6rop7y.sisko.replit.dev/upload/videos/${lessionID}/index.m3u8`;
+    // const videoUrl = `https://b6236a46-f430-4067-bddf-cc285bdc8cb8-00-2ocyvrk6rop7y.sisko.replit.dev/upload/videos/${lessionID}/index.m3u8`;
+    const videoUrl = `http://localhost:8080/uploads/videos/${lessionID}/index.m3u8`;
     res.json({
       message: "Video converted to HLS format",
       videoUrl: videoUrl,
@@ -70,5 +71,5 @@ app.post("/upload", upload.single("file"), (req, res) => {
 app.listen(8080, () => {
   const protocol = "http"; // or 'https' if you're using HTTPS
   const hostname = os.hostname();
-  console.log(`The server is running on link ${protocol}://${hostname}`);
+  console.log(`The server is running on link ${protocol}://${hostname}:8080`);
 });
