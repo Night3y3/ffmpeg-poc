@@ -86,28 +86,3 @@ To start the application, you need to run both the frontend and backend servers.
    ```
 
 3. Open your browser and navigate to the provided local server link (usually `http://localhost:8080`).
-
-## File Structure
-
-Here is a brief overview of the project structure:
-
-ffmpeg-poc/
-├── backend/
-├── index.js
-├── multer.js
-├── package.json
-├─── uploads/
-├── frontend/
-│ ├── public/
-│ ├── src/
-│ │ ├── assets/
-│ │ ├── components/
-│ │ ├── App.css
-│ │ ├── App.jsx
-│ │ ├── index.css
-│ │ ├── main.jsx
-│ │ └── VideoPlayer.jsx
-│ ├── package.json
-│ └── vite.config.js
-├── .gitignore
-└── README.md
